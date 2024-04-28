@@ -7,6 +7,7 @@ PODS:
   - hermes-engine (0.74.0):
     - hermes-engine/Pre-built (= 0.74.0)
   - hermes-engine/Pre-built (0.74.0)
+  - PDFNet (3.0.3-38)
   - RCT-Folly (2024.01.01.00):
     - boost
     - DoubleConversion
@@ -1163,6 +1164,9 @@ PODS:
     - React-logger (= 0.74.0)
     - React-perflogger (= 0.74.0)
     - React-utils (= 0.74.0)
+  - RNPdftron (3.0.4-3):
+    - PDFNet
+    - React-Core
   - SocketRocket (0.7.0)
   - Yoga (0.0.0)
 
@@ -1173,6 +1177,7 @@ DEPENDENCIES:
   - fmt (from `../node_modules/react-native/third-party-podspecs/fmt.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
+  - PDFNet (from `https://pdftron.com/downloads/ios/react-native/latest.podspec`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
@@ -1222,6 +1227,7 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNPdftron (from `../node_modules/react-native-pdftron`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1242,6 +1248,8 @@ EXTERNAL SOURCES:
   hermes-engine:
     :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
     :tag: hermes-2024-02-20-RNv0.74.0-999cfd9979b5f57b1269119679ab8cdf60897de9
+  PDFNet:
+    :podspec: https://pdftron.com/downloads/ios/react-native/latest.podspec
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTDeprecation:
@@ -1336,6 +1344,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNPdftron:
+    :path: "../node_modules/react-native-pdftron"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1346,6 +1356,7 @@ SPEC CHECKSUMS:
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
   glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
   hermes-engine: 6eae7edb2f563ee41d7c1f91f4f2e57c26d8a5c3
+  PDFNet: a472152366edb7895ad570404831ce798b728610
   RCT-Folly: 045d6ecaa59d826c5736dfba0b2f4083ff8d79df
   RCTDeprecation: 3ca8b6c36bfb302e1895b72cfe7db0de0c92cd47
   RCTRequired: 9fc183af555fd0c89a366c34c1ae70b7e03b1dc5
@@ -1393,9 +1404,10 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 7fe561d179b97cecd0c2bec0bbd08f9fd8581c26
   React-utils: f013537c3371270d2095bff1d594d00d4bc9261b
   ReactCommon: 2cde697fd80bd31da1d6448d25a5803088585219
+  RNPdftron: 47ae4f9481688fc3f9d4765877c08137b70dfd94
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: ff1d575b119f510a5de23c22a794872562078ccf
 
-PODFILE CHECKSUM: db81ae83c74344ce5630ae9ee5609d35e29037f9
+PODFILE CHECKSUM: 83da75f43f721cb314c67d7c73905a9151eabe5c
 
 COCOAPODS: 1.14.3
