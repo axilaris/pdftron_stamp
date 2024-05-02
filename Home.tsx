@@ -1,13 +1,20 @@
 import React, {useState} from 'react';
 import {View, TextInput, Button, StyleSheet, Text} from 'react-native';
 import {CompositeScreenProps} from '@react-navigation/native';
+import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
+import {
+  HomeNavigatorParams,
+  RootNavigatorParams,
+} from './src/types/navigator.types';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {useNavigation} from '@react-navigation/native';
 
 type Props = CompositeScreenProps<
-  any,
-  any
+  BottomTabScreenProps<HomeNavigatorParams, 'Home'>,
+  NativeStackScreenProps<RootNavigatorParams>
 >;
 
-const Home: React.FC<Props> = ({route, navigation}) => {
+const Home: React.FC<Props> = ({navigation, route}) => {
   const [signatureUrl, setSignatureUrl] = useState('');
   const [rubberStampUrl, setRubberStampUrl] = useState('');
   const [pdfUrl, setPdfUrl] = useState('');
@@ -34,6 +41,12 @@ const Home: React.FC<Props> = ({route, navigation}) => {
     console.log('Rubber Stamp URL:', rubberStampUrl);
     console.log('PDF URL:', pdfUrl);
     console.log('Default Font Size:', defaultFontSize);
+    navigation.navigate('PDFTron', {
+      signatureUrl,
+      stampUrl: rubberStampUrl,
+      pdfUrl,
+      fontSize: defaultFontSize,
+    });
   };
 
   return (

@@ -3,16 +3,17 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './Home';
 import PDFTron from './PDFTron';
+import {HomeNavigatorParams, RootNavigatorParams} from './src/types/navigator.types';
 
-const Stack = createNativeStackNavigator();
+const HomeStack = createNativeStackNavigator<HomeNavigatorParams>();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="PDFTron" component={PDFTron} />
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
+       <HomeStack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+        <HomeStack.Screen name="PDFTron" component={PDFTron} />
+        <HomeStack.Screen name="Home" component={Home} />
+      </HomeStack.Navigator>
     </NavigationContainer>
   );
 };
