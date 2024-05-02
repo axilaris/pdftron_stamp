@@ -37,10 +37,6 @@ const Home: React.FC<Props> = ({navigation, route}) => {
   };
 
   const handleLogInputs = () => {
-    console.log('Signature URL:', signatureUrl);
-    console.log('Rubber Stamp URL:', rubberStampUrl);
-    console.log('PDF URL:', pdfUrl);
-    console.log('Default Font Size:', defaultFontSize);
     navigation.navigate('PDFTron', {
       signatureUrl,
       stampUrl: rubberStampUrl,
