@@ -16,7 +16,8 @@ type Props = CompositeScreenProps<
 >;
 const PDFTron: React.FC<Props> = ({navigation, route}) => {
   //Access your parameters here
-  console.log(route.params);
+  const rubberStamp = route.params?.stampUrl;
+  const signature = route.params?.signatureUrl;
   RNPdftron.initialize('Insert commercial license key here after purchase');
   RNPdftron.enableJavaScript(true);
 
@@ -28,8 +29,7 @@ const PDFTron: React.FC<Props> = ({navigation, route}) => {
     }
   };
 
-  const path =
-    'https://pdftron.s3.amazonaws.com/downloads/pl/PDFTRON_mobile_about.pdf';
+  const path = route.params?.pdfUrl;
 
   return (
     <DocumentView
