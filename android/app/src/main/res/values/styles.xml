@@ -6,4 +6,17 @@
         <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
     </style>
 
+
+
+    <style name="PDFTronAppTheme" parent="PDFTronAppThemeBase">
+        <item name="free_text_presets">@array/custom_free_text_presets</item>
+    </style>
+
+    <style name="CustomFreeTextPresetStyle">
+        <item name="annot_color">#ffcd45</item>
+        <item name="annot_font_size">20</item>
+    </style>
+
+
+
 </resources>
