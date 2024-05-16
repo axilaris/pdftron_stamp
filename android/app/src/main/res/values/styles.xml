@@ -12,11 +12,20 @@
         <item name="free_text_presets">@array/custom_free_text_presets</item>
     </style>
 
-    <style name="CustomFreeTextPresetStyle">
+    <style name="CustomFreeTextPresetStyle1">
         <item name="annot_color">#ffcd45</item>
-        <item name="annot_font_size">20</item>
+        <item name="annot_font_size">21</item>
     </style>
 
+    <style name="CustomFreeTextPresetStyle2">
+        <item name="annot_color">#ffcd45</item>
+        <item name="annot_font_size">22</item>
+    </style>
+
+    <style name="CustomFreeTextPresetStyle3">
+        <item name="annot_color">#ffcd45</item>
+        <item name="annot_font_size">23</item>
+    </style>
 
 
 </resources>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="custom_free_text_presets">
-        <item>@style/CustomFreeTextPresetStyle</item>
+        <item>@style/CustomFreeTextPresetStyle1</item>
+        <item>@style/CustomFreeTextPresetStyle2</item>
+        <item>@style/CustomFreeTextPresetStyle3</item>
     </array>
 </resources>
